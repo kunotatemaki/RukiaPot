@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
@@ -6,44 +6,38 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
-apply plugin: 'androidx.navigation.safeargs'
-
-apply plugin: 'com.getkeepsafe.dexcount'
-
-
-
 android {
     compileSdkVersion 28
+
+
+
     defaultConfig {
-        applicationId "com.rukiasoft.rukiapot"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        vectorDrawables.useSupportLibrary = true
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
-    //libraries
-    implementation project(path: ':androidutilslibrary')
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
     implementation "androidx.appcompat:appcompat:$androidX_version"
-    implementation "androidx.constraintlayout:constraintlayout:$constraintLayout_version"
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation "androidx.test:runner:$androidX_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.1.0-alpha3"
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
 
     //dagger dependencies
     implementation "com.google.dagger:dagger:$rootProject.dagger_version"
@@ -58,14 +52,9 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    //Pagging
-    implementation "androidx.paging:paging-runtime:$paging_version"
-
-    //Navigation
-    implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
-
-    implementation "androidx.core:core-ktx:$androidX_version"
-
+}
+repositories {
+    mavenCentral()
 }

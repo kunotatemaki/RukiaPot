@@ -3,6 +3,7 @@ package com.rukiasoft.rukiapot.di.components
 import com.rukiasoft.rukiapot.ApplicationBase
 import com.rukiasoft.rukiapot.di.modules.ActivityBuilder
 import com.rukiasoft.rukiapot.di.modules.FragmentProvider
+import com.rukiasoft.rukiapot.di.modules.RukiaPotModule
 import com.rukiasoft.rukiapot.di.modules.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
@@ -23,6 +24,7 @@ import javax.inject.Singleton
 @Component(modules = [(AndroidSupportInjectionModule::class),
     (ActivityBuilder::class),
     (FragmentProvider::class),
+    (RukiaPotModule::class),
     (ViewModelModule::class)])
 interface RukiaPotComponent : AndroidInjector<ApplicationBase> {
     @Component.Builder

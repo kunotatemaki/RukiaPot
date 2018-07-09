@@ -14,4 +14,7 @@ class ApplicationBase: DaggerApplication() {
     }
 
 
+    override fun onCreate() {
+        super.onCreate()
+    }
 }

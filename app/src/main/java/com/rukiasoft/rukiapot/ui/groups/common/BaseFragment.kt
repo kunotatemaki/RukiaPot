@@ -1,6 +1,8 @@
 package com.rukiasoft.rukiapot.ui.groups.common
 
+import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerFragment
+import javax.inject.Inject
 
 
 /* Copyright (C) Rukiasoft - All Rights Reserved
@@ -12,4 +14,7 @@ import dagger.android.support.DaggerFragment
  */
 
 abstract class BaseFragment : DaggerFragment() {
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 }

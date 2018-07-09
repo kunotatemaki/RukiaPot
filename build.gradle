@@ -1,7 +1,18 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+ext{
+    dagger_version = '2.16'
+    androidX_version = '1.0.0-beta01'
+    constraintLayout_version = '1.1.2'
+    lifecycle_version = '2.0.0-beta01'
+    timber_version = '4.6.0'
+    room_version = "2.0.0-beta01"
+    paging_version = "2.0.0-beta01"
+}
+
 buildscript {
-    ext.kotlin_version = '1.2.50'
+    ext.kotlin_version = '1.2.51'
+    ext.nav_version = "1.0.0-alpha02"
     repositories {
         google()
         jcenter()
@@ -9,19 +20,15 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.0-alpha02'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.8.3'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
-ext{
-    dagger_version = '2.16'
-    androidX_version = '1.0.0-beta01'
-    constraintLayout_version = '1.1.2'
-    lifecycle_version = '2.0.0-beta01'
-    timber_version = '4.6.0'
-}
+
 
 allprojects {
     repositories {
