@@ -4,11 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.rukiasoft.rukiapot.VMFactory
 import com.rukiasoft.rukiapot.di.interfaces.ViewModelKey
-import com.rukiasoft.rukiapot.ui.groups.GroupsViewModel
+import com.rukiasoft.rukiapot.ui.pots.PotsViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import rukiasoft.com.androidutilslibrary.ViewModelFactory
 
 /* Copyright (C) Rukiasoft - All Rights Reserved
  *
@@ -23,8 +22,8 @@ internal abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(GroupsViewModel::class)
-    internal abstract fun bindGroupsViewModel(groupsViewModel: GroupsViewModel): ViewModel
+    @ViewModelKey(PotsViewModel::class)
+    internal abstract fun bindPotsViewModel(potsViewModel: PotsViewModel): ViewModel
 
     @Binds
     internal abstract fun bindViewModelFactory(factory: VMFactory): ViewModelProvider.Factory

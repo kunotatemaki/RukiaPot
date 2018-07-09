@@ -11,7 +11,7 @@ ext{
 }
 
 buildscript {
-    ext.kotlin_version = '1.2.51'
+    ext.kotlin_version = '1.2.50'
     ext.nav_version = "1.0.0-alpha02"
     repositories {
         google()

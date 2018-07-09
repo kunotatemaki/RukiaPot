@@ -1,8 +1,8 @@
 package com.rukiasoft.rukiapot
 
 import android.os.Bundle
-import com.rukiasoft.rukiapot.ui.groups.GroupsFragment
-import com.rukiasoft.rukiapot.ui.groups.common.BaseActivity
+import com.rukiasoft.rukiapot.ui.common.BaseActivity
+import com.rukiasoft.rukiapot.ui.pots.PotsFragment
 
 class MainActivity : BaseActivity() {
 
@@ -11,7 +11,7 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, GroupsFragment.newInstance())
+                    .replace(R.id.container, PotsFragment.newInstance())
                     .commitNow()
         }
     }

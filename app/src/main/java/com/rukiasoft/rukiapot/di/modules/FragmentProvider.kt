@@ -1,7 +1,7 @@
 package com.rukiasoft.rukiapot.di.modules
 
 import com.rukiasoft.rukiapot.di.interfaces.CustomScopes
-import com.rukiasoft.rukiapot.ui.groups.GroupsFragment
+import com.rukiasoft.rukiapot.ui.pots.PotsFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -19,6 +19,6 @@ abstract class FragmentProvider {
 
     @CustomScopes.FragmentScope
     @ContributesAndroidInjector
-    abstract fun provideGroupsFragmentFactory(): GroupsFragment
+    abstract fun providePotsFragmentFactory(): PotsFragment
 
 }

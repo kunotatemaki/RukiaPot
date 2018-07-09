@@ -33,14 +33,14 @@ class PersistenceManagerImpl  @Inject constructor(private val db: RukiaPotDataba
         db.potDao().insert(pot)
     }
 
-    override fun getPotsByDate(descendingSorted: Boolean): LiveData<Pot> {
+    override fun getPotsByDate(descendingSorted: Boolean): LiveData<List<Pot>> {
         return when(descendingSorted){
             true -> db.potDao().getPotsByDescendingAccessedDate()
             false -> db.potDao().getPotsByAscendingAccessedDate()
         }
     }
 
-    override fun getPotsByName(ascendingSorted: Boolean) : LiveData<Pot> {
+    override fun getPotsByName(ascendingSorted: Boolean) : LiveData<List<Pot>> {
         return when(ascendingSorted){
             true -> db.potDao().getPotsByAscendingName()
             false -> db.potDao().getPotsByDescendingName()

@@ -1,4 +1,4 @@
-package com.rukiasoft.rukiapot.ui.groups.common
+package com.rukiasoft.rukiapot.ui.common
 
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerFragment

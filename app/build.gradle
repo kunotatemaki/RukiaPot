@@ -56,10 +56,11 @@ dependencies {
 
     // Room
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-common:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
 
-    //Pagging
+    //Paging
     implementation "androidx.paging:paging-runtime:$paging_version"
 
     //Navigation

@@ -50,8 +50,11 @@ dependencies {
 
     // Room
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-common:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
+
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 }

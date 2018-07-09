@@ -5,7 +5,7 @@
     android:id="@+id/groups"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.groups.GroupsFragment">
+    tools:context=".ui.groups.PotsFragment">
 
     <TextView
         android:id="@+id/message"

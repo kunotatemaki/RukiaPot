@@ -1,4 +1,4 @@
-package com.rukiasoft.rukiapot.ui.groups
+package com.rukiasoft.rukiapot.ui.pots
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,10 +8,10 @@ import com.rukiasoft.rukiapot.persistence.entities.Pot
 import rukiasoft.com.androidutilslibrary.switchMap
 import javax.inject.Inject
 
-class GroupsViewModel @Inject constructor(private val persistenceManager: PersistenceManager) : ViewModel() {
+class PotsViewModel @Inject constructor(private val persistenceManager: PersistenceManager) : ViewModel() {
     // TODO: Implement the ViewModel
     private val query: MutableLiveData<Long> = MutableLiveData()
-    private val pots: LiveData<Pot>
+    private val pots: LiveData<List<Pot>>
     private var byDate: Boolean = true
     private var ascending: Boolean = true
 

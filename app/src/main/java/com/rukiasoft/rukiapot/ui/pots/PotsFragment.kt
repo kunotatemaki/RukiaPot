@@ -1,4 +1,4 @@
-package com.rukiasoft.rukiapot.ui.groups
+package com.rukiasoft.rukiapot.ui.pots
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,16 +7,16 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.rukiasoft.rukiapot.R
-import com.rukiasoft.rukiapot.ui.groups.common.BaseFragment
+import com.rukiasoft.rukiapot.ui.common.BaseFragment
 import timber.log.Timber
 
-class GroupsFragment : BaseFragment() {
+class PotsFragment : BaseFragment() {
 
     companion object {
-        fun newInstance() = GroupsFragment()
+        fun newInstance() = PotsFragment()
     }
 
-    private lateinit var viewModel: GroupsViewModel
+    private lateinit var viewModel: PotsViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -25,7 +25,7 @@ class GroupsFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this, viewModelFactory).get(GroupsViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(PotsViewModel::class.java)
         // TODO: Use the ViewModel
         viewModel.getPots().observe(this, Observer {
             it?.let {

@@ -14,6 +14,6 @@ import com.rukiasoft.rukiapot.persistence.entities.Pot
 
 interface PersistenceManager {
     fun insertPot(pot: Pot)
-    fun getPotsByDate(descendingSorted: Boolean = true): LiveData<Pot>
-    fun getPotsByName(ascendingSorted: Boolean = true): LiveData<Pot>
+    fun getPotsByDate(descendingSorted: Boolean = true): LiveData<List<Pot>>
+    fun getPotsByName(ascendingSorted: Boolean = true): LiveData<List<Pot>>
 }

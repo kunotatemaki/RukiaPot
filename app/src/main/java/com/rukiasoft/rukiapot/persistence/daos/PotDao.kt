@@ -19,15 +19,15 @@ import rukiasoft.com.androidutilslibrary.persistence.BaseDao
 abstract class PotDao : BaseDao<Pot> {
 
     @Query("SELECT * FROM pot ORDER BY open DESC, accessed DESC")
-    abstract fun getPotsByDescendingAccessedDate(): LiveData<Pot>
+    abstract fun getPotsByDescendingAccessedDate(): LiveData<List<Pot>>
 
     @Query("SELECT * FROM pot ORDER BY open DESC, accessed ASC")
-    abstract fun getPotsByAscendingAccessedDate(): LiveData<Pot>
+    abstract fun getPotsByAscendingAccessedDate(): LiveData<List<Pot>>
 
     @Query("SELECT * FROM pot ORDER BY open DESC, name ASC")
-    abstract fun getPotsByAscendingName(): LiveData<Pot>
+    abstract fun getPotsByAscendingName(): LiveData<List<Pot>>
 
     @Query("SELECT * FROM pot ORDER BY open DESC, name DESC")
-    abstract fun getPotsByDescendingName(): LiveData<Pot>
+    abstract fun getPotsByDescendingName(): LiveData<List<Pot>>
 
 }
