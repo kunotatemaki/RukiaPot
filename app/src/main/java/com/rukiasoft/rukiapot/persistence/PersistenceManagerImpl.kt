@@ -6,12 +6,15 @@ import com.rukiasoft.rukiapot.persistence.entities.Pot
 import javax.inject.Inject
 
 
-/* Copyright (C) Rukiasoft - All Rights Reserved
+/**
+ *  Copyright (C) Rukiasoft - All Rights Reserved
  *
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
  *
  * Written by Raul <raulfeliz@gmail.com>, July 2018
+ *
+ *
  */
 
 class PersistenceManagerImpl  @Inject constructor(private val db: RukiaPotDatabase) : PersistenceManager{

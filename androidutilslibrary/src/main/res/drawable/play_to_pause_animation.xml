@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:drawable="@drawable/play_icon"
+    tools:targetApi="lollipop">
+
+    <target
+        android:name="parts"
+        android:animation="@animator/rotate_90_animation"/>
+
+    <target
+        android:name="upper"
+        android:animation="@animator/upper_play_to_pause_animation"/>
+
+    <target
+        android:name="bottom"
+        android:animation="@animator/bottom_play_to_pause_animation"/>
+</animated-vector>

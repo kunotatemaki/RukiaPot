@@ -10,6 +10,17 @@ import com.rukiasoft.rukiapot.R
 import com.rukiasoft.rukiapot.ui.common.BaseFragment
 import timber.log.Timber
 
+/**
+ *  Copyright (C) Rukiasoft - All Rights Reserved
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ *
+ * Written by Raul <raulfeliz@gmail.com>, July 2018
+ *
+ *
+ */
+
 class PotsFragment : BaseFragment() {
 
     companion object {

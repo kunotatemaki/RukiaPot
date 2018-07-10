@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AndroidUtilsLibrary</string>
+    <string name="swipe_not_allowed">Operation not allowed while refreshing</string>
+    <string name="permission_explanation">Permission request</string>
+    <string name="accept_rationale">Got it!</string>
 </resources>

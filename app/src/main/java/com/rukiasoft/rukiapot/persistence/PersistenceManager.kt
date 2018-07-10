@@ -4,12 +4,15 @@ import androidx.lifecycle.LiveData
 import com.rukiasoft.rukiapot.persistence.entities.Pot
 
 
-/* Copyright (C) Rukiasoft - All Rights Reserved
+/**
+ *  Copyright (C) Rukiasoft - All Rights Reserved
  *
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
  *
  * Written by Raul <raulfeliz@gmail.com>, July 2018
+ *
+ *
  */
 
 interface PersistenceManager {
